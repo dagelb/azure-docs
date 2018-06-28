@@ -58,7 +58,7 @@ sudo nano /etc/iotedge/config.yaml
 Update the **connect** section of the configuration. For example:
 ```yaml
 connect:
-  management_uri: "http://172.17.0.1.1:15580"
+  management_uri: "http://172.17.0.1:15580"
   workload_uri: "http://172.17.0.1:15581"
 ```
 
@@ -66,7 +66,7 @@ Enter the same addresses in the **listen** section of the configuration. For exa
 
 ```yaml
 listen:
-  management_uri: "http://172.17.0.1.1:15580"
+  management_uri: "http://172.17.0.1:15580"
   workload_uri: "http://172.17.0.1:15581"
 ```
 
@@ -126,9 +126,9 @@ Check that your container image was successfully created and stored in the Azure
 
 1. Add the machine learning module that you created.
 
-    1. Click **Add** and select **Azure Machine Learning Module**.
+    1. Click **Add** and select **IoT Edge Module**.
     1. In the **Name** field, enter `machinelearningmodule`
-    1. In the **Image** field, enter your image address; for example `<registry_name>.azurecr.io/machinelearningmodule:1`.
+    1. In the **Image URI** field, enter your image address; for example `<registry_name>.azurecr.io/machinelearningmodule:1`.
     1. Select **Save**.
 
 1. Back in the **Add Modules** step, select **Next**.
